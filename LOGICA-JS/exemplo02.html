@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo 3</title>
+</head>
+<body>
+
+	<h1>Exemplo 03</h1>
+
+	<script>
+
+		//recurso pronto de JS para mostrar um aviso na tela
+		//disponibilizando uma caixa de texto para informar um valor
+
+		var num1 = prompt("Digite um numero inteiro");
+		let num2 = prompt("Digite um outro numero inteiro");
+
+		//inicialização da variável de resultado
+		var res = 0;
+
+		//processamento
+		//se o valor de num2 for igual a zero, entao mostra um avis
+		//senão, faz a visisão do número inicial, pelo 2do número
+		if(num2 == 0){
+			res = "O 2do numero nao pode ser zero";
+		}else{
+
+			res = num1/num2;
+		}
+		//saída (mostra o resultado no console);
+		console.log("O resultado foi: " + res);
+
+
+	</script>
+
+</body>
+</html>

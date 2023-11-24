@@ -1,0 +1,43 @@
+<html>
+	<head>
+
+	</head>
+	<body>
+		<span id=parametros_get></span>
+		<br>
+		<span id=exemplo_switch></span>
+
+		<script>
+			var elemento_parametros = document.getElementById("parametros_get")
+			var parametros = window.location.search
+			parametros = decodeURIComponent(parametros)
+			parametros = parametros.replace("?", "")
+			parametros = parametros.replace(/&/g, "<br>")
+
+			elemento_parametros.innerHTML = parametros
+
+			var elementSwitch = document.getElementById("exemplo_switch")
+
+			switch(localStorage.getItem("origem")){
+
+				case 'A':
+					elementSwitch.innerHTML = "É a origem A"
+					break
+
+				case 'B':
+					elementSwitch.innerHTML = "É a origem B"
+					break
+
+				case 'C':
+					elementSwitch.innerHTML = "É a origem C"
+					break
+
+				case 'D':
+					elementSwitch.innerHTML = "É a origem D"
+					break
+
+				default:
+					elementSwitch.innerHTML = "É outra origem"
+			}
+		</script>
+	</body>

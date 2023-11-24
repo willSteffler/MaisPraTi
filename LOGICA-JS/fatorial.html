@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		
+		function calculoFatorial(numero){
+
+			var acumulador = 1
+			while(numero > 1){
+
+				acumulador = acumulador * numero--
+				console.log(acumulador, numero)
+			}
+
+			return acumulador
+		}
+
+		var entrada = prompt("Entra como o numero para fatorial:")
+		var resultado = calculoFatorial(entrada)
+		alert(resultado)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

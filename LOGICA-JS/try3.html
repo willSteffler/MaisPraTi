@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script>
+
+			alert("vamos mostrar a divisao de dois numeros");
+
+			var dividendo = prompt("entre com o numero a ser dividido");
+			var divisor = prompt("entre com o numero de divisoes");
+			var quociente;
+
+			try{
+
+				quociente = dividendo / divisor;
+				if(divisor == 0){
+					throw "Impossivel fazer a divisao. Divisor e 0."
+				}
+
+				if(isNaN(dividendo)){
+
+					throw "Impossivel fazer a divisao. Dividendo nao e um numero";
+				}
+
+				if(isNaN(divisor)){
+
+					throw " Impossivel fazer a divisao. Divisor nao e um numero";
+				}
+
+				alert("O quociente da divisao e " + quociente);
+			}
+			catch(erro){
+
+				alert("Nao foi possivel fazer a divisao pelo erro " + erro);
+			}
+
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+</html>

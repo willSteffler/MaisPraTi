@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		
+		var dadosRecebidos = '{"Nome" : "Pedro", "telefone" : "(51) 3073-2100",  "endereco" : "Av. Casermiro de Abreu 150"}';
+
+		alert("vamos processar um dado (que poderia ter sido) ido na internet");
+
+		try{
+
+			data = JSON.parse(dadosRecebidos);
+		}
+		catch(erro){
+
+			
+		}
+
+		console.log(dadosRecebidos);
+		console.log(data);
+
+		alert(data.Nome);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

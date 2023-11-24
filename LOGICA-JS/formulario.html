@@ -1,0 +1,21 @@
+<html>
+	<head>
+	</head>
+
+	<body>
+		<form action=insere.html>
+		Nome: <input name=nome>
+		<br/>
+		E-mail: <input name=email>
+		<br>
+		<input type=hidden id=id_origem name=origem>
+		<br>
+		<input type=submit>
+		</form>
+
+		<script>
+			var elementoOrigem = document.getElementById("id_origem")
+			elementorigem.value = localStorage.getItem("origem")
+		</script>
+	</body>
+</html>

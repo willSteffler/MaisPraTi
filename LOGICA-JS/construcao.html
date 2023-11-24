@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<script>
+
+			var cadastro = [];
+
+				function exibirVariavelTabela(estrutura){
+
+					var retorno = "<table border=1>";
+					retorno +=  "<tr><th>Índice</th><th>Nome</th><th>Pontuação</th><th>Idade</th></tr>";
+
+					estrutura.forEach(function(item, indice){
+						if(item.marcar){
+							retorno += "<tr><td>" + (indice + 1) + "</td><td><b>" + item.nome + "</b></td><td>" + 	item.pontuacao + "</td><td>" + item.idade + "</td></tr>";
+						}
+						else{
+							retorno += "<tr><td>" + (indice + 1) + "</td><td>" + item.nome + "</td><td>" + 	item.pontuacao + "</td><td>" + item.idade + "</td></tr>";
+						}
+					});
+
+					retorno += "</table>";
+
+					return retorno;
+			}
+
+			function inserir(){
+
+				var nome = document.getElementById("nome").value;
+				var pontuacao = document.getElementById("pontuacao").value;
+				var idade = document.getElementById("idade").value;
+
+				var elemento = {nome: nome, pontuacao: pontuacao, idade: idade, marcar: false};
+
+				cadastro.push(elemento);
+
+				var retorno = exibirVariavelTabela(cadastro);
+	
+				document.getElementById("relatorio").innerHTML = retorno;
+			}
+
+			function pesquisar(){
+
+				var nome_pesquisar = document.getElementById("nome_pesquisar").value;
+
+				cadastro.forEach(function(item){
+
+					if(nome_pesquisar == item.nome)
+						item.marcar = true;
+					else
+						item.marcar = false;
+
+				});
+
+				var relatorio = exibirVariavelTabela(cadastro);
+				document.getElementById("relatorio").innerHTML = relatorio;
+			}
+
+			function maiorIdade(){
+
+
+				var retorno = "<table border=1>";
+				retorno += "<tr><th>Índice</th><th>Nome</th><th>Pontuação</th><th>Idade</th></tr>";
+				cadastro.forEach(function(item, indice){
+					if(item.idade >= 18){
+						retorno += "<tr><td>" + (indice + 1) + "</td><td><b>" + item.nome + "</b></td><td>" + item.pontuacao + "</td><td>" + item.idade + "</td></tr>"
+					}
+
+				});
+
+				retorno += "</table>";
+				document.getElementById("relatorio").innerHTML = retorno;
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<form>
+
+			<br><input type="text" id="nome" placeholder="nome do candidato">
+			<br><br><input type="text" id="pontuacao" placeholder="Pontuação" size="5">
+			<br><br><input type="text" id="idade" placeholder="Idade" size="5">
+			<br><br><input type="button" value="inserir" onclick="inserir();">
+			<hr>
+			<input type="text" id="nome_pesquisar" placeholder="Pesquisar">
+			<br><br><input type="button" value="Pesquisar" onclick="pesquisar();">
+			<hr>
+			<input type="button" value="Exibir somente maior de 18" onclick="maiorIdade();">
+
+		</form>
+
+		<hr>
+
+		<div id="relatorio">Cadastro:</div>
+	</body>
+</html>

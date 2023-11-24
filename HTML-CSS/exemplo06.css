@@ -1,0 +1,45 @@
+* {
+
+	margin: 0;
+	padding: 0;
+}
+#all {
+
+	width: 1000px;
+	margin: auto;
+}
+#top{
+
+	height: 50px;
+	background-color: #EEEEEE;
+}
+
+
+#logo{
+
+	height: 100px;
+	background-color: #3333CC;
+}
+
+#banner{
+
+	height: 150px;
+	background-color: #EEEEEE;
+}
+
+#content{
+
+	background-color: #FFFFFF;
+}
+
+#footer{
+
+	height: 30px;
+	background-color: #3333FF;
+}
+
+/* formatacao das divisoes de conteudo*/
+	.noticias{
+
+
+	}
